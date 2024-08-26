@@ -1,0 +1,29 @@
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    <bean id = "pet" class="org.example.Pet">-->
+<!--        <property name="age" value="5"/>-->
+<!--        <constructor-arg value="6"/>-->
+<!--        <constructor-arg name="age" value="6"/>-->
+<!--        <constructor-arg index="0" value="6"/>-->
+
+<!--        <property name="cat" ref="cat1"/>-->
+<!--        <constructor-arg ref="cat1"/>-->
+
+<!--        <property name="animal" ref="dog"/>-->
+<!--    </bean>-->
+
+    <bean id = "pet" class="org.example.Pet" autowire="byType">
+    </bean>
+
+<!--    <bean id = "cat" class="org.example.Cat"/>-->
+<!--    <bean id = "cat1" class="org.example.Cat"/>-->
+<!--    <bean id = "dog" class="org.example.Dog"/>-->
+
+    <bean id = "animal" class="org.example.Cat" primary="true"/>
+    <bean id = "animal2" class="org.example.Dog"/>
+
+</beans>
